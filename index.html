@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>售后服务</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="wrapper">
+    <h3>常见问题</h3>
+    <ul class="ques-list">
+        <li>
+            <img src="img/pic1.png" alt="">
+            <span>设备故障/硬件故障</span>
+        </li>
+        <li>
+            <img src="img/pic2.png" alt="">
+            <span>操作/人为故障</span>
+        </li>
+        <li>
+            <img src="img/pic3.png" alt="">
+            <span>其他问题</span>
+        </li>
+    </ul>
+    <h3>反馈跟踪</h3>
+    <ul>
+        <li class="view-ques">
+            <img src="img/pic4.png" alt="">
+            <span>查看已提交问题</span>
+        </li>
+    </ul>
+</div>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+$(".ques-list li").on("click",function(){
+    var quesType=$(this).children("span").html();
+    localStorage.setItem("quesType",quesType);
+    location.href="description.html";
+});
+    $(".view-ques").on("click",function(){
+        location.href="question-list.html";
+    })
+</script>
+</html>

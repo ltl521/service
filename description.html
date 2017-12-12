@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>售后服务</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/description.css">
+</head>
+<body>
+<div class="wrapper">
+    <h3>问题类型：<span class="ques-type"><!--设备故障/硬件故障--></span></h3>
+    <div class="ques-txt" contenteditable="true" data-placeholder="请输入您的问题描述"></div>
+    <!--上传照片-->
+    <div class="submit-box">
+        <form action="" id="form" method="post" enctype="multipart/form-data">
+            <!--<div class="picture">
+            <img src="img/submit-picture.png" alt="">
+            <div class="del-pic"></div>
+        </div>-->
+
+            <div class="upload"></div>
+            <a>上传照片 <span>(最多10张)</span></a>
+            <input id="file" runat="server" type="file" accept="image/*" capture="camera" style="width:100%" />
+        </form>
+        <!--大图-->
+        <div class="big-pic-box">
+            <img src="" alt="">
+        </div>
+    </div>
+
+    <!--手机号-->
+    <div>
+        <span>手机号码</span>
+        <input type="text" id="phone" placeholder="请输入号码">
+    </div>
+    <!--提交时间-->
+    <div>
+        <span>提交时间</span>
+        <p id="time"><!--2017-12-11 10:00--></p>
+    </div>
+    <button type="button" class="submit">提交</button>
+</div>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/description.js"></script>
+</html>
