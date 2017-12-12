@@ -6,11 +6,14 @@ $(".ques-type").html(localStorage.getItem("quesType"));//初始化问题类型
 
 //初始化时间
 var mydate=new Date();
-var date=mydate.toLocaleDateString().replace(/\//g,"-");
+var year=mydate.getFullYear();
+var month=mydate.getMonth()+1;
+var day=mydate.getDate();
+//var date=mydate.toLocaleDateString().replace(/\//g,"-");
 var h=mydate.getHours();
 var m=mydate.getMinutes();
 m=m<10?"0"+m:m;
-var time0=date+" "+h+":"+m;
+var time0=year+"-"+month+"-"+day+" "+h+":"+m;
 $("#time").html(time0);
 
 
