@@ -9,6 +9,7 @@ var mydate=new Date();
 var date=mydate.toLocaleDateString().replace(/\//g,"-");
 var h=mydate.getHours();
 var m=mydate.getMinutes();
+m=m<10?"0"+m:m;
 var time0=date+" "+h+":"+m;
 $("#time").html(time0);
 
