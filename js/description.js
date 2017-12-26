@@ -24,7 +24,7 @@ $(".submit-box>form>a").on("click",chooseFile);
 
 function chooseFile(){
     var html='';
-    $('#file').replaceWith('<input id="file" runat="server" type="file" accept="image/*" capture="camera" style="width:100%" />');
+    $('#file').replaceWith('<input id="file" runat="server" type="file" accept="image/*" style="width:100%" />');
     $("#file").click();
     $("#file").off("change").on("change",function(){
         var file = this.files[0];  //文件对象
